@@ -26,7 +26,7 @@ export default {
       }
     },
     toggleFormVisibility() {
-      this.isFormVisible = !this.isFormVisible; // Inverti la visibilità del form
+      this.isFormVisible = !this.isFormVisible; 
     },    
   },
 
@@ -40,9 +40,9 @@ export default {
 
 <!-- smartphone -->
   <div class="button-tipology">
-    <button @click="toggleFormVisibility" class="button-tipology btn btn-dark">Tipologie</button> <!-- Bottone per mostrare il form -->
+    <button @click="toggleFormVisibility" class="button-tipology btn btn-dark">Types</button> 
     <form v-if="isFormVisible" class="container-element-menu">
-      <!-- Contenuto del form con le checkbox -->
+
       <div v-for="singleType in store.typeList" :key="singleType.id" class="border-bottom">
         <TypeCard :type="singleType" @checkboxToggled="handleCheckboxToggle(singleType.id, $event)" />
       </div>

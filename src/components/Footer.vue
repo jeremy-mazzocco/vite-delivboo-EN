@@ -33,29 +33,29 @@ export default {
             <ul id="voucher-column">
                 <h4>VOUCHER</h4>
                 <img id="footer-coupon" src="../assets/img/Logo-Bianco-DeliveBoo.png" alt="footer-coupon">
-                <p>Basta usare il codice</p>
+                <p>Use the code</p>
                 <p class="yellow" id="coupon-code">FIRSTORDER</p>
-                <p>Al pagamento</p>
+                <p>To payments</p>
             </ul>
 
             <!-- navigate column -->
             <ul id="navigate-column">
-                <h4>NAVIGA</h4>
+                <h4>BROWSE</h4>
                 <li><router-link to="/">Home</router-link></li>
-                <li><a href="#">Carrello</a></li>
+                <li><a href="#">Cart</a></li>
             </ul>
 
             <!-- opening column -->
             <ul id="opening-column">
-                <h4>ORARI LAVORATIVI</h4>
-                <li>Tutti i giorni <span class="yellow">24h su 24</span></li>
+                <h4>WORKING HOURSE</h4>
+                <li>Every day <span class="yellow">24h</span></li>
             </ul>
 
             <!-- information column -->
             <ul id="information-column">
-                <h4>INFORMAZIONI</h4>
+                <h4>INFORMATIONS</h4>
                 <li><a href="javascript:void(0)">Account</a></li>
-                <li><a href="javascript:void(0)">Termini Di Servizio</a></li>
+                <li><a href="javascript:void(0)">Termins of Use</a></li>
                 <li><a href="javascript:void(0)">Privacy Policy</a></li>
                 <img class="download-badge" src="../assets/img/app-store-badge.png" alt="app-store-badge">
                 <img class="download-badge" src="../assets/img/play-store-badge.png" alt="play-store-badge">
@@ -65,21 +65,17 @@ export default {
 
         <!-- Bottom Footer -->
         <section id="bottom-footer">
-            <!-- <div class="img_container">
-
-                <img id="logo-footer" src="../assets/img/Logo-Bianco-DeliveBoo.png" alt="logo-footer">
-            </div> -->
-            <h3 class="yellow">Rimani aggiornato</h3>
+            <h3 class="yellow">Stay update</h3>
             <form id="subscribe-form">
-                <p>Iscriviti per ricevere novità e offerte aggiornate direttamente nella tua casella di posta:</p>
+                <p>"Subscribe to receive updated news and offers directly in your inbox:"</p>
                 <div>
                     <input type="email" id="sign-up-mailbox" placeholder="account@email.com" required>
                 </div>
                 <div>
                     <button type="submit" class="red-button" id="subscribe-button"
-                        @click="showThanksMessage()">ISCRIVITI</button>
+                        @click="showThanksMessage()">RESGISTER</button>
                 </div>
-                <p v-if="thxMsg" class="gold-msg">Grazie per esserti registrato!</p>
+                <p v-if="thxMsg" class="gold-msg">"Thank you for registering!"</p>
             </form>
             <div id="socials-container">
                 <a href="javascript:void(0)"><i class="fa-brands fa-facebook"></i></a>

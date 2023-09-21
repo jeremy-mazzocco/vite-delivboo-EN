@@ -17,7 +17,6 @@ export default {
   },
   computed: {
     isPaymentRoute() {
-      // Verifica se la route corrente è "Payment"
       return this.$route.name === 'Payment';
     }
   }

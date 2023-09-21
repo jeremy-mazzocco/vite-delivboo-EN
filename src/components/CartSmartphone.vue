@@ -79,13 +79,13 @@ export default {
 
 <!-- smartphone -->
   <div class="button-tipology">
-    <button @click="toggleFormVisibility" class="button-tipology btn btn-dark">Carrello</button> <!-- Bottone per mostrare il form -->
+    <button @click="toggleFormVisibility" class="button-tipology btn btn-dark">Cart</button> <!-- Bottone per mostrare il form -->
 
 
     <div class="card" v-if="isFormVisible">
         <div @click="toggleButton" class="card-header">
-            <h2 class=" text-center d-none d-md-block">Il tuo carrello</h2>
-            <div class="text-center"><small class="text-body-secondary">codice ordine: {{ store.order_code }}</small></div>
+            <h2 class=" text-center d-none d-md-block">Your cart</h2>
+            <div class="text-center"><small class="text-body-secondary">Order number: {{ store.order_code }}</small></div>
         </div>
         <div class="card-body">
             <div v-for="details in store.cart" :key="details.id">
@@ -109,7 +109,7 @@ export default {
                 <hr>
             </div>
             <div id="empty-cart" v-if="store.cart.length < 1">
-                <p class="text-center">IL TUO CARRELLO E' VUOTO</p>
+                <p class="text-center">YOUR CART IS EMPTY</p>
                 <div class="text-center"><font-awesome-icon icon="cart-shopping" /></div>
             </div>
         </div>
@@ -122,7 +122,7 @@ export default {
         }">
     
                 <button class="btn btn-success " v-if="store.cart.length > 0">
-                    Ordina e Paga {{ cartTotal.toFixed(2) }} &euro;
+                    Pay{{ cartTotal.toFixed(2) }} &euro;
                 </button>
     
         </router-link>

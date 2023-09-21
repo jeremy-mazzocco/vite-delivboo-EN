@@ -79,8 +79,8 @@ export default {
 <template>
     <div class="card">
         <div @click="toggleButton" class="card-header">
-            <h2 class=" text-center ">Carrello</h2>
-            <div class="text-center"><small class="text-body-secondary">codice ordine: {{ store.order_code }}</small></div>
+            <h2 class=" text-center ">Cart</h2>
+            <div class="text-center"><small class="text-body-secondary">Order number: {{ store.order_code }}</small></div>
         </div>
         <div class="card-body">
             <div v-for="details in store.cart" :key="details.id">
@@ -94,7 +94,7 @@ export default {
                         <div class="col-2 text-start">
                             <div class="add-button plus" @click="decreaseQuantity(details)">-</div>
                         </div>
-                        <div class="col-7 text-center mod">Modifica</div>
+                        <div class="col-7 text-center mod">Edit</div>
                         <div class="col-3 d-flex justify-content-end">
                             <div class="deduct-button plus" @click="increaseQuantity(details)">+</div>
                         </div>
@@ -104,7 +104,7 @@ export default {
                 <hr>
             </div>
             <div id="empty-cart" v-if="store.cart.length < 1">
-                <p class="text-center">IL TUO CARRELLO E' VUOTO</p>
+                <p class="text-center">YOUR CART IS EMPTY</p>
                 <div class="text-center"><font-awesome-icon icon="cart-shopping" /></div>
             </div>
         </div>

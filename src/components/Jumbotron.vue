@@ -29,12 +29,12 @@ export default {
 
         <div id="title-container">
 
-            <p class="white">Affamato?</p>
+            <p class="white">Hungry?</p>
 
-            <h1 class="yellow">Cibo Direttamente a Casa!</h1>
+            <h1 class="yellow">Deliver directly to your House!</h1>
 
             <button class="white red-button" @click="scrollToRestaurantShow">
-                VISUALIZZA I RISTORANTI 
+                SHOW RESTAURANT 
                 <i class="fa-solid fa-circle-right"></i>
             </button>
 

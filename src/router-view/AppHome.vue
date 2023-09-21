@@ -163,7 +163,7 @@ export default {
           <div class="upper-fade d-none d-md-block"></div>
           <!-- desktop -->
           <div class="container-element">
-            <h4>Tipologie</h4>
+            <h4>Types</h4>
             <TypeMenu @change="cercaRistorante()"/>  
           </div>
 
@@ -172,7 +172,7 @@ export default {
         <div class="col-md-10 col-sm-12">
           <div class="upper-fade d-none d-md-block"></div>
           <div class="container-element">
-            <h2>Ristoranti</h2>
+            <h2>Restaurants</h2>
             <RestaurantShow />
           </div>
           <div class="lower-fade d-none d-md-block"></div>

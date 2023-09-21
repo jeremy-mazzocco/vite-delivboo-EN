@@ -4,7 +4,7 @@
         @submit.prevent="submitOrder">
 
             <div class="riepilogo_form">
-                <h3>Riepilogo ordine</h3>
+                <h3>Your Order</h3>
 
                 <hr>
 
@@ -15,7 +15,7 @@
             </div>
 
             <div class="container-riepilogo">
-                <h3>Riepilogo ordine {{ store.order_code }}</h3>
+                <h3>Your Order {{ store.order_code }}</h3>
                 <div class="riepilogo">
                     <ul v-for="details in store.cart" :key="details.id">
                         <li>
@@ -27,34 +27,34 @@
 
                     <hr>
                     <div class="total-price-style">
-                        <span>Prezzo Totale: </span>
+                        <span>Total: </span>
                         <span class="price-style">{{ priceTotal.toFixed(2) }} &euro;</span>
                     </div>
                 </div>
             </div>
 
-            <label for="customers_name">Nome:</label>
+            <label for="customers_name">Name:</label>
             <input type="text" id="customers_name" name="customer_name" required v-model="this.customer_name" ><br><br>
 
-            <label for="customers_adress">Indirizzo di Consegna:</label>
+            <label for="customers_adress">Delivey address:</label>
             <textarea id="customers_adress" name="customer_adress"  required v-model="this.customer_adress"></textarea><br><br>
 
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required  v-model="this.email"><br><br>
 
-            <label for="phone_number">Numero di Telefono:</label>
+            <label for="phone_number">Phone Number:</label>
             <input type="tel" id="phone_number" name="phone_number" required v-model="this.phone_number"><br><br>
             <h5 v-if="!this.transactionStatus" class=" text-center border border-danger text-danger rounded-3 py-3">
-                Inserisci una carta di credito valida!
+                Card not valid!
             </h5>
             <h5 v-if="this.transactionStatus === true" class=" text-center border border-success text-success rounded-3 py-3">
-                Transazione completata correttamente
+                Transaction completed
             </h5>
 
             <Braintree @transaction-complete="handleTransactionComplete" />
     
             <h5 v-if="this.dataError" class=" text-center border border-danger text-danger rounded-3 py-3">
-                Errore database
+                Database error
             </h5>
 
         </form>
