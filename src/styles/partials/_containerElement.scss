@@ -1,0 +1,42 @@
+.main-container{
+    // height: calc(100vh - 50px);
+  
+    h3 {
+      text-align: center;
+    }
+    .container-element {
+      padding-top: 20px;
+      height: calc(100vh - 100px);
+      overflow-y: scroll; 
+      scrollbar-width: thin; /* Larghezza sottile della barra di scorrimento */
+      scrollbar-color: transparent transparent; /* Colore trasparente per la barra di scorrimento */
+      margin: 100px 0;
+      // opacity: 0;
+      // transition: opacity 0.5s ease-in-out;
+      // position: relative;
+    }
+      @media (max-width: 767px) { 
+        .container-element {
+          padding-top: 20px;
+          height: auto;
+          overflow-y: none;
+          margin: 100px 0;
+          opacity: auto;
+          transition: none;
+          position: relative; 
+        }
+        .container-element-menu {
+          padding-top: 20px;
+          overflow-y: auto;
+          height: 70vh;
+        }
+  }
+  
+  .container-element::-webkit-scrollbar {
+    width: 6px; /* Larghezza della barra di scorrimento */
+  }
+  
+  .container-element::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Colore trasparente per il "pulsante" di scorrimento */
+  }
+}

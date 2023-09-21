@@ -1,0 +1,65 @@
+@use './partials/variables' as *;
+@use './partials/containerElement' as *;
+
+//bootstrap
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+//font awsome
+
+// @import '../../node_modules/@fortawesome/fontawesome-svg-core/styles.css';
+// @import '../../node_modules/@fortawesome/free-brands-svg-icons/';
+// @import '../../node_modules/@fortawesome/free-solid-svg-icons/';
+
+
+//font -> npm install @fontsource-variable/montserrat
+//trovato su https://fontsource.org/fonts/montserrat/install
+
+@import '../../node_modules/@fontsource-variable/montserrat/index.css';
+@import '../../node_modules/@fontsource-variable/montserrat';
+
+body {
+    font-family: $main-font;
+    color: $text-color;
+    background-color: $bg-color;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+.yellow {
+    color: rgba(252, 220, 49, 255);
+}
+
+.white {
+    color: white;
+}
+
+.red-button {
+    background-color: rgba(206, 26, 38, 255);
+    color: white;
+    padding: 11px 30px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    border: 2px solid rgba(0, 0, 0, 0);
+    transition: opacity 0.3s ease;
+}
+
+.red-button:hover {
+    opacity: 0.8;
+    border: 2px solid black;
+}
+
+.red-button:active {
+    transform: scale(0.9);
+}
+
+.bottom-margin {
+    padding-bottom: 50px;
+    visibility: hidden;
+}
